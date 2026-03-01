@@ -1,0 +1,10 @@
+# Окружение
+venv/
+.env
+
+# Логи
+*.log
+
+# Кэш Python
+__pycache__/
+*.pyc
