@@ -24,18 +24,22 @@ API: https://www.exchangerate-api.com/
 1.  **Клонировать репозиторий:**
     ```bash
     git clone https://github.com/dashdash27/rate-tracking-system.git
+    cd rate-tracking-system
     ```
 
-2.  **Настроить переменные окружения:**
- Создайте файл `.env` на основе примера:
+2.  **Настроить переменные окружения:**  
+ Создать файл `.env` на основе примера:
     ```bash
+    # Для macOS / Linux / PowerShell:
     cp .env.example .env
+    
+    # Для Windows (CMD):
+    copy .env.example .env
     ```
-    *Обязательно укажите API-ключ`EXCHANGE_RATE_API_KEY` в созданном файле. Его можно получить бесплатно на сайте https://www.exchangerate-api.com/*
-
+    *Обязательно укажите API-ключ `EXCHANGE_RATE_API_KEY` в созданном файле. Его можно получить бесплатно на сайте https://www.exchangerate-api.com/*
 3.  **Запустить контейнеры:**
     ```bash
-    docker-compose up --build -d
+    docker-compose up --build
     ```
     После запуска сервис начнет опрашивать API с заданным интервалом (по умолчанию - каждые 5 минут).
 
